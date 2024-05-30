@@ -6,8 +6,8 @@
 @include('partials.header')
 
 <section>
-    <div class="container">
-        <div class="row gy-4">
+    <div class="container text-center">
+        <div class="row gy-4 justify-content-center">
             <div class="col-4">
                 <div class="card h-100">
                         <img src="{{$comic->thumb}}" class="card-img-top" alt="comic_image">
@@ -18,7 +18,7 @@
                         <p class="card-text">{{$comic->type}}</p>
                         <p class="card-text">{{$comic->price}}</p>
                         <p class="card-text">{{$comic->description}}</p>
-                        <a href="{{route('comic.index', $comic)}}" class="btn btn-primary">go to Index</a>
+                        <a href="{{route('comic.index', $comic)}}" class="mt-4 btn btn-warning text-primary fw-bold">Go Back</a>
                     </div>
                 </div>
             </div>

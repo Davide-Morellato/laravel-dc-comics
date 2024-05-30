@@ -1,1 +1,5 @@
 @use '~bootstrap/scss/bootstrap';
+
+@use 'partials/layout';
+@use 'partials/reset';
+@use 'partials/utilities';

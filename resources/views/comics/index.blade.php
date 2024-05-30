@@ -7,22 +7,21 @@
 
 <section>
     <div class="container">
-        <ul class="row gy-4 list-unstyled">
+        <div class="row gy-4 list-unstyled">
             @foreach($comics as $comic)
-            <li class="col-4">
-                <div class="card h-100">
-                    <img src="{{$comic->thumb}}" class="h-50 w-100" alt="comic_image">
+            <ul class="col-4 fade-in-comic">
+                <li class="card h-100 text-center">
+                    <img src="{{$comic->thumb}}" class="h-75 w-100" alt="comic_image">
                     <div class="card-body">
                         <h5 class="card-title">{{$comic->title}}</h5>
                         <p class="card-text">{{$comic->series}}</p>
                         <p class="card-text">{{$comic->sale_date}}</p>
-                        <p class="card-text">{{$comic->description}}</p>
-                        <a href="{{route('comic.show', $comic)}}" class="btn btn-primary">go to Show for more details</a>
+                        <a href="{{route('comic.show', $comic)}}" class="mt-4 btn btn-warning text-primary fw-bold">Details</a>
                     </div>
-                </div>
-            </li>
+                </li>
+            </ul>
             @endforeach
-        </ul>
+        </div>
     </div>
 </section>
 

@@ -1,0 +1,44 @@
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.inverted {
+    filter: invert(100%);
+}
+
+.fade-in-text {
+    font-family: Arial;
+    font-size: 60px;
+    animation: fadeIn 8s;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+
+
+.fade-in-comic {
+  animation: 2s fadeInUp;
+  transition-timing-function: linear;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
