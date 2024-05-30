@@ -17,6 +17,7 @@
                         <p class="card-text">{{$comic->series}}</p>
                         <p class="card-text">{{$comic->sale_date}}</p>
                         <a href="{{route('comic.show', $comic)}}" class="mt-4 btn btn-warning text-primary fw-bold">Details</a>
+                        <a href="{{route('comic.edit', $comic)}}" class="mt-4 btn btn-info text-primary fw-bold ms-4">Edit Comic</a>
                     </div>
                 </li>
             </ul>

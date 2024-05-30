@@ -10,6 +10,9 @@
                 <a href="{{route('comic.index')}}" class="btn btn-warning text-primary fw-bold">
                     Go to Comics
                 </a>
+                <a href="{{route('comic.create')}}" class="btn btn-light text-primary fw-bold ms-4">
+                    Create Comic
+                </a>
             </div>
         </div>
     </nav>

@@ -10,9 +10,8 @@
 }
 
 .fade-in-text {
-    font-family: Arial;
     font-size: 60px;
-    animation: fadeIn 8s;
+    animation: fadeIn 10s;
 }
 
 @keyframes fadeIn {
@@ -23,7 +22,6 @@
       opacity: 1;
   }
 }
-
 
 
 .fade-in-comic {
