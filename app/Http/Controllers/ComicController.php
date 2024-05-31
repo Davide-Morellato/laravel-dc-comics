@@ -33,7 +33,7 @@ class ComicController extends Controller
 
         $new_comic = Comic::create($form_data);
 
-        return to_route('comic.index', $new_comic);
+        return to_route('comic.show', $new_comic);
     }
 
     public function edit(Comic $comic){

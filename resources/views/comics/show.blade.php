@@ -21,7 +21,9 @@
                         <a href="{{route('comic.index', $comic)}}" class="mt-4 btn btn-warning text-primary fw-bold">Go Back</a>
                         <div class="d-flex justify-content-evenly">
                         <a href="{{route('comic.edit', $comic)}}" class="mt-4 btn btn-success text-light fw-bold px-3">Edit Comic</a>
-                            <form action="{{route('comic.destroy', $comic)}}" method="post">
+
+                        <!-- AGGIUNTA DEL CONFIRM DIRETTAMENTE NEL FORM [funziona]: onclick="return confirm('Sei sicuro?')" -->
+                            <form action="{{route('comic.destroy', $comic)}}" method="post" onsubmit="return deleteFunction()">
                                 @csrf
                                 @method('DELETE')
                                 <button class="mt-4 btn btn-danger text-dark fw-bold">Delete Comic</button>
@@ -33,6 +35,19 @@
         </div>
     </div>
 </section>
+
+<script>
+    
+function deleteFunction(){
+
+const del = confirm("Sei sicuro?");
+
+if (!del) {
+    return false;
+}
+}
+
+</script>
 
 @include('partials.footer')
 @endsection
