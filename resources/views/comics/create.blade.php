@@ -41,8 +41,9 @@
                     <label for="description" class="form-label text-white">Descrizione</label>
                     <textarea class="form-control" name="description" id="description" rows="8"></textarea>
                 </div>
-                <div class="text-center pt-3">
-                    <button class="btn btn-warning text-primary fw-bold">Invia comics</button>
+                <div class="d-flex justify-content-evenly pt-3">
+                    <button class="btn btn-success text-white fw-bold">Invia comics</button>
+                    <a href="{{route('comic.index')}}" class="btn btn-warning text-primary fw-bold">Go Back</a>
                 </div>
             </form>
         </div>

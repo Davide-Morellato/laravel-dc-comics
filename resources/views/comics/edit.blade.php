@@ -6,10 +6,13 @@
 <section>
     <div class="container w-50 m-auto py-5">
         <div class="row">
-            <div class="text-center py-3">
-                <h2 class="text-white fs-4">
-                    Edita il fumetto: {{$comic->title}}
+            <div class="text-center py-3 text-white fs-4">
+                <h2>
+                    Edita il fumetto:
                 </h2>
+                <h3>
+                    {{$comic->title}}
+                </h3>
             </div>
             <form action="{{route('comic.update', $comic)}}" method="POST">
                 @csrf
@@ -43,8 +46,9 @@
                     <label for="description" class="form-label text-white">Descrizione</label>
                     <textarea class="form-control" name="description" id="description" rows="5">{!! $comic->description !!}</textarea>
                 </div>
-                <div class="text-center pt-3">
-                    <button class="btn btn-warning text-primary fw-bold">Invia Edit</button>
+                <div class="d-flex justify-content-evenly pt-3">
+                    <button class="btn btn-success text-white fw-bold">Invia Edit</button>
+                    <a href="{{route('comic.show', $comic)}}" class="btn btn-warning text-primary fw-bold">Go Back</a>
                 </div>
             </form>
         </div>
