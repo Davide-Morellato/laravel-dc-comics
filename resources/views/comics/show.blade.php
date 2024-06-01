@@ -23,7 +23,7 @@
                             <a href="{{route('comic.edit', $comic)}}" class="mt-4 btn btn-success text-light fw-bold px-3">Edit Comic</a>
 
                             <!-- AGGIUNTA DEL CONFIRM DIRETTAMENTE NEL FORM [funziona]: onclick="return confirm('Sei sicuro?')" || onsubmit="return deleteFunction()" -->
-                            <form action="{{route('comic.destroy', $comic)}}" method="post" onsubmit="return deleteFunction()">
+                            <form action="{{route('comic.destroy', $comic)}}" method="POST" onsubmit="return deleteFunction()">
                                 @csrf
                                 @method('DELETE')
                                 <!-- NON FUNZIONA: id="btn_delete" -->
@@ -40,7 +40,7 @@
 <script>
 
     //
-    //NONFUNZIONA
+    //NON FUNZIONA
     //
     // const btn_delete = document.getElementById('btn_delete');
 
@@ -54,6 +54,19 @@
     // })
 
 
+    //
+    //FUNZIONA 
+    //
+    // function deleteFunction() {
+
+    //     const del = confirm("Sei sicuro?");
+
+    //     if (del !== true) {
+    //         return false;
+    //     }
+    // }
+
+    
     function deleteFunction() {
 
         const del = confirm("Sei sicuro?");
